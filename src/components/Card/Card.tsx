@@ -11,19 +11,36 @@ import {
   WrapperFrontCard,
 } from "./style";
 
-export default function Card() {
+type CardProps = {
+  number: string;
+  name: string;
+  cvc: string;
+  expireMonth: string;
+  expireYear: string;
+};
+export default function Card({
+  number: cardNumber,
+  name: cardHolderName,
+  cvc: cardCVC,
+  expireMonth,
+  expireYear,
+}: CardProps) {
   return (
     <WrapperCard>
       <WrapperFrontCard>
         <Logo src={logo} alt="logo" />
-        <FrontCardNumber>0000 0000 0000 0000</FrontCardNumber>
+        <FrontCardNumber>
+          {Boolean(cardNumber) ? cardNumber : "0000 0000 0000 0000"}
+        </FrontCardNumber>
         <FontCardInformation>
-          <FontCardName>Jane Appleseed</FontCardName>
-          <FontCardDate>00/00</FontCardDate>
+          <FontCardName>
+            {Boolean(cardHolderName) ? cardHolderName : "Jane Appleseed"}
+          </FontCardName>
+          <FontCardDate></FontCardDate>
         </FontCardInformation>
       </WrapperFrontCard>
       <WrapperBackCard>
-        <CvvCode>000</CvvCode>
+        <CvvCode>{Boolean(cardCVC) ? cardCVC : "000"}</CvvCode>
       </WrapperBackCard>
     </WrapperCard>
   );

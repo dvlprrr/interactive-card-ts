@@ -2,10 +2,9 @@ import { styled } from "styled-components";
 import cardBack from "../../images/cardBack.png";
 import cardFront from "../../images/cardFront.png";
 export const WrapperCard = styled.div`
-  height: 100vh;
   color: hsl(0, 0%, 100%);
   gap: 40px;
-  width: 45%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,6 +12,7 @@ export const WrapperCard = styled.div`
 `;
 
 export const WrapperFrontCard = styled.div`
+  min-width: 344px;
   align-self: center;
   padding: 30px;
   padding-bottom: 25px;
@@ -27,6 +27,7 @@ export const WrapperFrontCard = styled.div`
   justify-content: space-between;
 `;
 export const FrontCardNumber = styled.p`
+  align-self: baseline;
   margin: 0;
   margin-top: 60px;
   font-size: 26px;

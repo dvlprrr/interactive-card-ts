@@ -1,7 +1,7 @@
-export type Card = {
+export type CardType = {
   number: string;
-  expiry: string;
   cvc: string;
   name: string;
-  focus: any;
+  expireMonth: string;
+  expireYear: string;
 };

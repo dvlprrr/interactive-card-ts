@@ -9,7 +9,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url(./images/bgDesktop.png);
   background-repeat: no-repeat;
-  height: 100vh;
 }
 
 code {
@@ -18,10 +17,12 @@ code {
 }
 .page {
   text-rendering: optimizeLegibility;
-  font-family: "SpaceGrotesk-Medium", Arial, Helvetica, sans-serif;
+  font-family: "SpaceGrotesk", Arial, Helvetica, sans-serif;
   font-weight: 500;
   width: 1440px;
   margin: 0 auto;
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
+  height: 100vh;
 }
