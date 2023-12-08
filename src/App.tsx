@@ -17,12 +17,24 @@ function App() {
   const handleCardName = (value: string) => {
     setCardState({ ...cardState, name: value });
   };
+  const handleCardCvc = (value: string) => {
+    setCardState({ ...cardState, cvc: value });
+  };
+  const handleCardMonth = (value: string) => {
+    setCardState({ ...cardState, expireMonth: value });
+  };
+  const handleCardYear = (value: string) => {
+    setCardState({ ...cardState, expireYear: value });
+  };
   return (
     <div className="page">
       <Card {...cardState} />
       <CardForm
         handleCardName={handleCardName}
         handleCardNumber={handleCardNumber}
+        handleCardCvc={handleCardCvc}
+        handleCardMonth={handleCardMonth}
+        handleCardYear={handleCardYear}
       />
     </div>
   );

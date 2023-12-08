@@ -1,4 +1,4 @@
-import logo from "../../images/card-logo.svg";
+import cardLogo from "../../images/card-logo.svg";
 import {
   CvvCode,
   FontCardDate,
@@ -28,7 +28,7 @@ export default function Card({
   return (
     <WrapperCard>
       <WrapperFrontCard>
-        <Logo src={logo} alt="logo" />
+        <Logo src={cardLogo} alt="logo" />
         <FrontCardNumber>
           {Boolean(cardNumber) ? cardNumber : "0000 0000 0000 0000"}
         </FrontCardNumber>
@@ -36,7 +36,11 @@ export default function Card({
           <FontCardName>
             {Boolean(cardHolderName) ? cardHolderName : "Jane Appleseed"}
           </FontCardName>
-          <FontCardDate></FontCardDate>
+          <FontCardDate>
+            {Boolean(expireMonth || expireYear)
+              ? `${expireMonth}/${expireYear}`
+              : "99/99"}
+          </FontCardDate>
         </FontCardInformation>
       </WrapperFrontCard>
       <WrapperBackCard>

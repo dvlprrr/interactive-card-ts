@@ -1,13 +1,17 @@
 import styled from "styled-components";
 
 export const WrapperCardForm = styled.form`
-  width: 45%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  & > :first-child {
+    margin-top: 0;
+  }
 `;
 export const CardFormLabel = styled.label`
+  margin-top: 20px;
   width: 65%;
   font-size: 14px;
   text-transform: uppercase;
@@ -28,7 +32,6 @@ export const CardFormInput = styled.input`
   }
   border-radius: 8px;
   outline: none;
-  margin-bottom: 20px;
 `;
 
 export const CardFormInfoWrapper = styled.div`
@@ -44,7 +47,6 @@ export const CardFormInfoItem = styled.div`
   flex-direction: column;
 `;
 export const CardFormInfoInput = styled(CardFormInput)`
-  margin-bottom: 0;
   width: 100%;
 `;
 export const CardFormDateInputWrapper = styled.div`
@@ -52,3 +54,40 @@ export const CardFormDateInputWrapper = styled.div`
   flex-direction: row;
   gap: 15px;
 `;
+export const Button = styled.button`
+  font-family: "SpaceGrotesk", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 15px 0;
+  border: none;
+  color: white;
+  background-color: hsl(278, 68%, 11%);
+  border-radius: 8px;
+  margin-top: 40px;
+  width: 65%;
+`;
+
+export const ErrorMessage = styled.p`
+  margin: 0;
+  font-size: 12px;
+  color: #ff0000;
+`;
+
+export const ComplitedWrapper = styled.div`
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+export const ComplitedTitle = styled.h2`
+  margin: 0;
+  margin-top: 20px;
+  font-size: 30px;
+  text-transform: uppercase;
+`;
+export const ComplitedDescription = styled.p`
+  margin: 15px 0 0;
+  color: hsl(279, 6%, 55%);
+`;
+export const DateInputWrapper = styled.div``;
